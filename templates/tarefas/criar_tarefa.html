@@ -1,0 +1,147 @@
+{% extends base.html %}
+
+    {% block content%}
+    <!-- Conteudo Principal -->
+    <main class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" class="text-decoration-none">
+                                <i class="bi bi-house-door"></i> Tarefas
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Nova Tarefa</li>
+                    </ol>
+                </nav>
+
+                <!-- Card do Formulario -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">
+                            <i class="bi bi-plus-circle">Nova tarefa</i>
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+
+                        <!-- Formulario -->
+                        <form method="POST" action="/tarefas/nova/" id="formTarefa">
+
+                            <!-- Titulo -->
+                            <div class="mb-3">
+                                <label for="titulo" class="form-label fw-semibold">
+                                    Titulo <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-type"></i>
+                                    </span>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="titulo"
+                                        name="titulo"
+                                        placeholder="Digite o titulo da tarefa"
+                                        required
+                                        maxlength="100"
+                                    >
+                                </div>
+                                <div class="form-text">Maximo de 100 caracteres.</div>
+                            </div>
+
+                            <!-- Descricao -->
+                            <div class="mb-3">
+                                <label for="descricao" class="form-label fw-semibold">
+                                    Descricao
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-text-paragraph"></i>
+                                    </span>
+                                    <textarea
+                                        class="form-control"
+                                        id="descricao"
+                                        name="descricao"
+                                        rows="3"
+                                        placeholder="Descreva a tarefa (opcional)"
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Categoria e Status -->
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="categoria" class="form-label fw-semibold">
+                                        <i class="bi bi-tags"></i> Categoria
+                                    </label>
+                                    <select class="form-select" id="categoria" name="categoria">
+                                        <option value="">Selecione...</option>
+                                        <option value="estudo">Estudo</option>
+                                        <option value="trabalho">Trabalho</option>
+                                        <option value="pessoal">Pessoal</option>
+                                        <option value="configuracao">Configuracao</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="status" class="form-label fw-semibold">
+                                        <i class="bi bi-flag"></i> Status
+                                    </label>
+                                    <select class="form-select" id="status" name="status">
+                                        <option value="pendente" selected>Pendente</option>
+                                        <option value="em_andamento">Em Andamento</option>
+                                        <option value="concluida">Concluida</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Prazo -->
+                            <div class="mb-3">
+                                <label for="prazo" class="form-label fw-semibold">
+                                    <i class="bi bi-calendar-event"></i> Prazo
+                                </label>
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="prazo"
+                                    name="prazo"
+                                >
+                            </div>
+
+                            <!-- Botoes -->
+                            <div class="d-flex justify-content-between mt-4">
+                                <a href="/tarefas/" class="btn btn-outline-secondary">
+                                    <i class="bi bi-arrow-left"></i> Cancelar
+                                </a>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-check-lg"></i> Salvar Tarefa
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Card informativo (didatico) -->
+                <div class="card border-info mt-3">
+                    <div class="card-body">
+                        <h6 class="card-title text-info">
+                            <i class="bi bi-info-circle"></i> Observacoes
+                        </h6>
+                        <ul class="small text-muted mb-0">
+                            <li>Este formulario envia dados via <strong>POST</strong> para <code>/tarefas/nova/</code>.</li>
+                            <li>Os links usam URLs fixas (<code>/tarefas/</code>) que depois virarao <code>{  % url % }</code> no Django.</li>
+                            <li>Ainda nao ha <code>{% csrf_token %}</code> porque o Django nao esta processando este formulario ainda.</li>
+                            <li>Ao integrar com Django, sera necessario adicionar a tag CSRF e usar <code>{   % url % }</code> nos links.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    {%endblock%}
