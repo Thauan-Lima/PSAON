@@ -90,34 +90,16 @@
                                 </div>
                             </div>
 
-                            <!-- Lembrar-me -->
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="lembrar" name="lembrar">
-                                    <label class="form-check-label small" for="lembrar">
-                                        Lembrar de mim
-                                    </label>
-                                </div>
-
-                            <!-- Botao Entrar -->
+                            <!-- Botao Concluido -->
                             <div class="d-grid">
-                                <a href={% url 'inicio' %} class="btn btn-primary">
-                                    <i class="bi bi-box-arrow-in-right"></i> Entrar
-                                </a>
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="bi bi-box-arrow-in-right"></i> Concluído
+                                </button>
                             </div>
                         </form>
 
                         <!-- Divisor -->
                         <hr class="my-4">
-
-                        <!-- Link de Cadastro -->
-                        <div class="text-center">
-                            <p class="text-muted small mb-0">
-                                Não tem conta?
-                                <a href="{% url 'cadastro' %}" class="text-decoration-none fw-bold">
-                                    Cadastre-se
-                                </a>
-                            </p>
-                        </div>
 
                     </div>
                 </div>

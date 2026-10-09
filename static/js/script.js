@@ -1,9 +1,3 @@
-/* ============================================
-   Sistema de Gerenciamento de Tarefas
-   script.js - Funcionalidades JavaScript
-   Complementa o Bootstrap 5
-   ============================================ */
-
 // ---------- Filtrar Tarefas na Tabela ----------
 function filtrarTarefas() {
     const input = document.getElementById('buscaTarefa');

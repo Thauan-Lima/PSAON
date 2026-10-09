@@ -1,4 +1,4 @@
-{% extends base.html %}
+{% extends 'base.html' %}
 
     {% block content%}
     <!-- Conteudo Principal -->
@@ -22,7 +22,7 @@
                 <div class="card shadow-sm">
                     <div class="card-header bg-primary text-white">
                         <h5 class="mb-0">
-                            <i class="bi bi-plus-circle">Nova tarefa</i>
+                            <i class="bi bi-plus-circle"></i> Nova Tarefa
                         </h5>
                     </div>
                     <div class="card-body p-4">
@@ -52,41 +52,23 @@
                                 <div class="form-text">Maximo de 100 caracteres.</div>
                             </div>
 
-                            <!-- Descricao -->
-                            <div class="mb-3">
-                                <label for="descricao" class="form-label fw-semibold">
-                                    Descricao
-                                </label>
-                                <div class="input-group">
-                                    <span class="input-group-text">
-                                        <i class="bi bi-text-paragraph"></i>
-                                    </span>
-                                    <textarea
-                                        class="form-control"
-                                        id="descricao"
-                                        name="descricao"
-                                        rows="3"
-                                        placeholder="Descreva a tarefa (opcional)"
-                                    ></textarea>
-                                </div>
-                            </div>
 
                             <!-- Categoria e Status -->
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="categoria" class="form-label fw-semibold">
-                                        <i class="bi bi-tags"></i> Categoria
+                            
+                                <div class="mb-3">
+                                    <label for="disciplina" class="form-label fw-semibold">
+                                        <i class="bi bi-pencil-square"></i> Disciplina
                                     </label>
                                     <select class="form-select" id="categoria" name="categoria">
                                         <option value="">Selecione...</option>
-                                        <option value="estudo">Estudo</option>
-                                        <option value="trabalho">Trabalho</option>
-                                        <option value="pessoal">Pessoal</option>
-                                        <option value="configuracao">Configuracao</option>
+                                        <option value="estudo">Português</option>
+                                        <option value="trabalho">Matemática</option>
+                                        <option value="pessoal">Autoria Web</option>
+                                        <option value="configuracao">História</option>
                                     </select>
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="mb-3">
                                     <label for="status" class="form-label fw-semibold">
                                         <i class="bi bi-flag"></i> Status
                                     </label>
@@ -96,7 +78,7 @@
                                         <option value="concluida">Concluida</option>
                                     </select>
                                 </div>
-                            </div>
+                            
 
                             <!-- Prazo -->
                             <div class="mb-3">
@@ -113,11 +95,11 @@
 
                             <!-- Botoes -->
                             <div class="d-flex justify-content-between mt-4">
-                                <a href="/tarefas/" class="btn btn-outline-secondary">
+                                <a href="/tarefas/" class="btn btn-outline-danger">
                                     <i class="bi bi-arrow-left"></i> Cancelar
                                 </a>
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="bi bi-check-lg"></i> Salvar Tarefa
+                                    <i class="bi bi-floppy"></i> Salvar Atividade
                                 </button>
                             </div>
                         </form>
@@ -125,21 +107,7 @@
                     </div>
                 </div>
 
-                <!-- Card informativo (didatico) -->
-                <div class="card border-info mt-3">
-                    <div class="card-body">
-                        <h6 class="card-title text-info">
-                            <i class="bi bi-info-circle"></i> Observacoes
-                        </h6>
-                        <ul class="small text-muted mb-0">
-                            <li>Este formulario envia dados via <strong>POST</strong> para <code>/tarefas/nova/</code>.</li>
-                            <li>Os links usam URLs fixas (<code>/tarefas/</code>) que depois virarao <code>{  % url % }</code> no Django.</li>
-                            <li>Ainda nao ha <code>{% csrf_token %}</code> porque o Django nao esta processando este formulario ainda.</li>
-                            <li>Ao integrar com Django, sera necessario adicionar a tag CSRF e usar <code>{   % url % }</code> nos links.</li>
-                        </ul>
-                    </div>
-                </div>
-
+            
             </div>
         </div>
     </main>
