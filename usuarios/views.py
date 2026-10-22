@@ -10,4 +10,4 @@ def cadastro(request):
     return render(request, 'usuarios/cadastro.html')
 
 def inicio(request):
-    return render(request, 'tarefas/listar_tarefas.html')
+    return render(request, 'tarefas/dashboard.html')
