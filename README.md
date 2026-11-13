@@ -34,7 +34,7 @@
 
 # 7. Instalação e execução [IMPORTANTE PARA A ATIVIDADE 02]
 ## 1. Clone o repositório
-    git clone https://github.com/usuario/projeto_tasks.git
+    git clone https://github.com/Thauan-Lima/PSAON.git
     cd projeto_tasks
     
 ## 2. Crie o ambiente virtual
