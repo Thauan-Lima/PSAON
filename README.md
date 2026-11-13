@@ -57,6 +57,7 @@ No Linux ou Mac:
 Isso instala o Django e o python-dotenv de uma só vez ( Com a venv ativado, claro).
 
 ## 7.4. Crie o arquivo .env
+Crie o arquivo .env na raiz o projeto
 Copie o arquivo modelo e renomeie para .env:
 
     cp .env.example .env
