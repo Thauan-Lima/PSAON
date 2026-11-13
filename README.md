@@ -33,11 +33,11 @@
 * **Git:** Para clonar o repositório.
 
 # 7. Instalação e execução [IMPORTANTE PARA A ATIVIDADE 02]
-## 1. Clone o repositório
+## 7.1. Clone o repositório
     git clone https://github.com/Thauan-Lima/PSAON.git
     cd projeto_tasks
     
-## 2. Crie o ambiente virtual
+## 7.2. Crie o ambiente virtual
 O ambiente virtual isola as dependências do projeto do resto do sistema:
 
     python -m venv ./venv
@@ -52,11 +52,11 @@ No Linux ou Mac:
 
     source venv/bin/activate
     
-## 3. Instale as dependências
+## 7.3. Instale as dependências
     pip install -r requirements.txt
 Isso instala o Django e o python-dotenv de uma só vez ( Com a venv ativado, claro).
 
-## 4. Crie o arquivo .env
+## 7.4. Crie o arquivo .env
 Copie o arquivo modelo e renomeie para .env:
 
     cp .env.example .env
@@ -72,7 +72,7 @@ Abra o .env. Ele contém:
 
 SECRET_KEY está vazia de propósito. Ela precisa ser gerada por cada pessoa, porque nunca é enviada para o GitHub.
 
-## 5. Gere a sua SECRET_KEY
+## 7.5. Gere a sua SECRET_KEY
 Com o ambiente ativado, execute: 
     
     python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
@@ -80,7 +80,7 @@ Com o ambiente ativado, execute:
 O terminal imprime uma chave aleatória, parecida com esta:
 
     django-insecure-9x#k2$m4v@q7w8e9r1t2y3u4i5o6p7a8s9d0f1g2h3j4k5l6
-## 6. Cole a chave no .env
+## 7.6. Cole a chave no .env
 Copie a chave impressa e cole no arquivo, sem aspas e sem espaços:
 
     SECRET_KEY=django-insecure-9x#k2$m4v@q7w8e9r1t2y3u4i5o6p7a8s9d0f1g2h3j4k5l6
