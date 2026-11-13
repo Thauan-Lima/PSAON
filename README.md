@@ -14,7 +14,23 @@
 **Gerar relatórios contendo informações sobre as ocorrências registradas durante a avaliação.**
 **Garantir que o aluno permaneça focado no ambiente da prova durante todo o período de realização.** 
 
-# 4. Funcionalidades: descrição das principais funcionalidades implementadas ou previstas (informar caso a funcionalidade não estiver disponível ainda).
+# 4. Funcionalidades
+**RF01– Permitir o cadastro e autenticação de usuários no sistema (Em processo)** 
+**RF02 – Permitir que professores criem, editem e excluam avaliações (Falta)** 
+**RF03– Permitir o cadastro e gerenciamento de questões e respostas (Falta)** 
+**RF04 – Permitir que alunos realizem avaliações por meio do ambiente web (Falta)** 
+**RF05 – Permitir que professores atribuam, lancem e editem as notas dos alunos (Falta)** 
+** RF06 – Restringir a abertura de novas abas e janelas durante a realização da avaliação (Falta)**
+**RF07 – Detectar tentativas de saída da página da avaliação (Falta)**
+**RF08 – Registrar eventos de comportamento suspeito durante a execução da prova (Falta)**
+**RF09 – Identificar tentativas de alternância entre a avaliação e outras aplicações ou páginas (Falta)**
+**RF10– Registrar tentativas de captura de tela quando tecnicamente possível (Falta)**
+**RF11 – Armazenar os registros de monitoramento associados a cada avaliação (Falta)**
+**RF12 – Gerar relatórios contendo os eventos registrados durante a realização da prova (Falta)**
+**RF13 – Permitir que professores visualizem os relatórios de monitoramento dos alunos (Falta)**
+**RF14 - Permitir que os professores definam data e horário de início e término da avaliação (Falta)**
+**RF15 – Registrar data e horário de início e término da avaliação (Falta)**
+
 
 # 5. Tecnologias utilizadas [IMPORTANTE PARA A ATIVIDADE 02]
 * **Python**
